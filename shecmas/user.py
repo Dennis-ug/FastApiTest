@@ -6,15 +6,15 @@ from models.user import User, DeviceInfo
 #     genger: str
 
 
-def deviceEntity(device) -> dict:
-    deviceName: 'deviceName'
-    serialNumber: 'serialNumber'
-    ip: 'ip'
+# def deviceEntity(device) -> dict:
+#     deviceName: 'deviceName'
+#     serialNumber: 'serialNumber'
+#     ip: 'ip'
 
 
 def singleUserEntity(userObject: User) -> dict:
     return{
-        # 'id': str(userObject['_id']),
+        'id': str(userObject['_id']),
         'userName': userObject['userName'],
         'email': userObject['email'],
         'contact': userObject['contact'],
@@ -41,5 +41,6 @@ def userDoc(userObject: User) -> dict:
         'gender': userObject.gender,
         'deviceInfo': {'deviceName': userObject.deviceInfo.deviceName,
                        'serialNumber': userObject.deviceInfo.serialNumber,
-                       'ip': userObject.deviceInfo.ip, }
+                       'ip': userObject.deviceInfo.ip,
+                        }
     }

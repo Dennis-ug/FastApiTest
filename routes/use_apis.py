@@ -5,7 +5,7 @@ from shecmas.user import singleUserEntity, listOfUsers, userDoc
 
 db = conn.ChurchDb.docs
 
-user = APIRouter(tags='Users')
+user = APIRouter(tags=['Users'])
 
 
 @user.get('/')
